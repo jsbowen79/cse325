@@ -1,78 +1,174 @@
 Repository Link: https://github.com/jsbowen79/cse325.git 
 Item 1: Evidence of existing pizzas and additional pizza
+    
+http://localhost:5024/pizza/> get
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Date: Tue, 27 Oct 2026 19:06:43 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
 
-
+[
+  {
+    "id": 1,
+    "name": "Classic Italian",
+    "isGlutenFree": false
+  },
+  {
+    "id": 2,
+    "name": "Veggie",
+    "isGlutenFree": true
+  },
+  {
+    "id": 3,
+    "name": "Hawaiian",
+    "isGlutenFree": false
+  }
+]
+ 
 
 Item 2: Request, response, and status codes of CRUD operations
-Post: post -c "{"name":"Hawaii", "isGlutenFree":false}"
+Post: 
+    request: post -c "{"name":"Hawaii", "isGlutenFree":false}"
+    response: 
+    http://localhost:5024/pizza/> post -c "{"name":"Hawaii", "isGlutenFree":false}"                                                                 
+    HTTP/1.1 201 Created                                                                                                                            
+    Content-Type: application/json; charset=utf-8                                                                                                   
+    Date: Tue, 27 Oct 2026 19:03:13 GMT                                                                                                             
+    Location: http://localhost:5024/Pizza/3                                                                                                         
+    Server: Kestrel                                                                                                                                 
+    Transfer-Encoding: chunked                                                                                                                      
 
-Put:  put 3 -c  "{"id": 3, "name":"Hawaiian", "isGlutenFree":false}"
+    {
+    "id": 3,
+    "name": "Hawaii",
+    "isGlutenFree": false
+    }
+    status code: 201
 
-Get[id]: get 3
+ 
+Put: 
+    request: put 3 -c  "{"id": 3, "name":"Hawaiian", "isGlutenFree":false}"
+    response: 
+        http://localhost:5024/pizza/> put 3 -c  "{"id": 3, "name":"Hawaiian", "isGlutenFree":false}"
+        HTTP/1.1 204 No Content
+        Date: Tue, 27 Oct 2026 19:04:23 GMT
+        Server: Kestrel
+    status code: 204
 
+    
 
+Get[id]: 
+    request: get 3
+    response: 
+       http://localhost:5024/pizza/> get 3
+        HTTP/1.1 200 OK
+        Content-Type: application/json; charset=utf-8
+        Date: Tue, 27 Oct 2026 19:08:08 GMT
+        Server: Kestrel
+        Transfer-Encoding: chunked
 
-Get: get
+        {
+        "id": 3,
+        "name": "Hawaiian",
+        "isGlutenFree": false
+        } 
+    status code: 200
 
+ Get: 
+    request: get
+    response: 
+        http://localhost:5024/pizza/> get
+        HTTP/1.1 200 OK
+        Content-Type: application/json; charset=utf-8
+        Date: Tue, 27 Oct 2026 19:06:43 GMT
+        Server: Kestrel
+        Transfer-Encoding: chunked
 
-Delete: delete 3
+        [
+        {
+            "id": 1,
+            "name": "Classic Italian",
+            "isGlutenFree": false
+        },
+        {
+            "id": 2,
+            "name": "Veggie",
+            "isGlutenFree": true
+        },
+        {
+            "id": 3,
+            "name": "Hawaiian",
+            "isGlutenFree": false
+        }
+        ]
+    status code: 200
+ 
 
+Delete: 
+    request: delete 3
+    response: 
+        http://localhost:5024/pizza/> delete 3
+        HTTP/1.1 204 No Content
+        Date: Tue, 27 Oct 2026 19:09:57 GMT
+        Server: Kestrel
+    status code: 204
+ 
 
-
-Item 3: A text copy of the working Sales summary function: 
+ Item 3: A text copy of the working Sales summary function: 
 My sales summary function utilizes a total of 4 functions as shown below. 
+
 (allSalesFiles, salesFiles) = FindFiles(storesDirectory);
 createSalesSummaryFile();
 
 void createSalesSummaryFile()
 {
-    (double totalSales, string detailString) = detailsStringWithTotal();
-    string reportIntro = SalesSummary(totalSales);
-    string completedReport = $"{reportIntro}\n{detailString}";
-    Console.WriteLine($"completedReport: \n{completedReport}");
-    File.WriteAllText(Path.Combine(salesTotalDir, "salesSummaryReport.txt"), completedReport);
+    (double totalSales, string detailString) = detailsStringWithTotal();
+    string reportIntro = SalesSummary(totalSales);
+    string completedReport = $"{reportIntro}\n{detailString}";
+    Console.WriteLine($"completedReport: \n{completedReport}");
+    File.WriteAllText(Path.Combine(salesTotalDir, "salesSummaryReport.txt"), completedReport);
 }
 
 string SalesSummary(double totalSales)
 {
-    List<string> report = new(
-   [$"\t\t\t\t\tSales Summary{Environment.NewLine}", $"{new string('-', 96)}{Environment.NewLine}",
-   $"{"Total Sales", -75 }     :{totalSales, 15:C}\n"]);
-    return string.Join("", report);
+    List<string> report = new(
+   [$"\t\t\t\t\tSales Summary{Environment.NewLine}", $"{new string('-', 96)}{Environment.NewLine}",
+   $"{"Total Sales", -75 }     :{totalSales, 15:C}\n"]);
+    return string.Join("", report);
 }
 
 (double, string) detailsStringWithTotal()
 {
-    List<string> report = new();
-    report.Add($"Details: {Environment.NewLine}");
-    double totalSales = 0;
+    List<string> report = new();
+    report.Add($"Details: {Environment.NewLine}");
+    double totalSales = 0;
 
-    foreach (var file in salesFiles)
-    {
-        string salesJson = File.ReadAllText(file);
-        SalesData? data = JsonConvert.DeserializeObject<SalesData?>(salesJson);
-        totalSales += data?.Total ?? 0;
-        report.Add($"{Path.GetRelativePath(storesDirectory, file),-80}:{data?.Total ?? 0,15:C}{Environment.NewLine}");
-    }
-    return (totalSales, string.Join("", report));
+    foreach (var file in salesFiles)
+    {
+        string salesJson = File.ReadAllText(file);
+        SalesData? data = JsonConvert.DeserializeObject<SalesData?>(salesJson);
+        totalSales += data?.Total ?? 0;
+        report.Add($"{Path.GetRelativePath(storesDirectory, file),-80}:{data?.Total ?? 0,15:C}{Environment.NewLine}");
+    }
+    return (totalSales, string.Join("", report));
 }
 
 (List<string>, List<string>) FindFiles(string folderName)
 {
-    var foundFiles = Directory.EnumerateFiles(folderName, "*", SearchOption.AllDirectories);
-    foreach (var file in foundFiles)
-    {
-        var extension = Path.GetExtension(file);
-        if (extension == ".json")
-        {
-            allSalesFiles.Add(file);
-        }
-        if (file.EndsWith("sales.json"))
-        {
-            salesFiles.Add(file);
-        }
-    }
+    var foundFiles = Directory.EnumerateFiles(folderName, "*", SearchOption.AllDirectories);
+    foreach (var file in foundFiles)
+    {
+        var extension = Path.GetExtension(file);
+        if (extension == ".json")
+        {
+            allSalesFiles.Add(file);
+        }
+        if (file.EndsWith("sales.json"))
+        {
+            salesFiles.Add(file);
+        }
+    }
 
-    return (allSalesFiles, salesFiles);
+    return (allSalesFiles, salesFiles);
 }
-
