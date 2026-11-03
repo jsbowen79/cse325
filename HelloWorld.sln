@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetDebugging", "DotNetDe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mslearn-dotnet-files", "mslearn-dotnet-files\mslearn-dotnet-files.csproj", "{8495F75F-5B38-405E-9CE0-45E06FB94CF6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASPDotNetCore", "ASPDotNetCore", "{EA42BC05-EB8B-AB9D-F054-07AC4C172C8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp", "BlazorApp\BlazorApp.csproj", "{1187D631-D0E3-434A-87D9-D474B2E4510E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,18 @@ Global
 		{8495F75F-5B38-405E-9CE0-45E06FB94CF6}.Release|x64.Build.0 = Release|Any CPU
 		{8495F75F-5B38-405E-9CE0-45E06FB94CF6}.Release|x86.ActiveCfg = Release|Any CPU
 		{8495F75F-5B38-405E-9CE0-45E06FB94CF6}.Release|x86.Build.0 = Release|Any CPU
+		{1187D631-D0E3-434A-87D9-D474B2E4510E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1187D631-D0E3-434A-87D9-D474B2E4510E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1187D631-D0E3-434A-87D9-D474B2E4510E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1187D631-D0E3-434A-87D9-D474B2E4510E}.Debug|x64.Build.0 = Debug|Any CPU
+		{1187D631-D0E3-434A-87D9-D474B2E4510E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1187D631-D0E3-434A-87D9-D474B2E4510E}.Debug|x86.Build.0 = Debug|Any CPU
+		{1187D631-D0E3-434A-87D9-D474B2E4510E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1187D631-D0E3-434A-87D9-D474B2E4510E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1187D631-D0E3-434A-87D9-D474B2E4510E}.Release|x64.ActiveCfg = Release|Any CPU
+		{1187D631-D0E3-434A-87D9-D474B2E4510E}.Release|x64.Build.0 = Release|Any CPU
+		{1187D631-D0E3-434A-87D9-D474B2E4510E}.Release|x86.ActiveCfg = Release|Any CPU
+		{1187D631-D0E3-434A-87D9-D474B2E4510E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
