@@ -51,6 +51,30 @@ public static class SeedData
                     Genre = "Western",
                     Rating = "PG-13",
                     Price = 3.99M
+                },
+                new Movie
+                {
+                    Title = "Captain America - Civil War ",
+                    ReleaseDate = DateTime.Parse("2016-02-04"),
+                    Genre = "Action",
+                    Rating = "PG-13",
+                    Price = 29.99M
+                },
+                new Movie
+                {
+                    Title = "The Bourne Legacy",
+                    ReleaseDate = DateTime.Parse("2012-2-23"),
+                    Genre = "Action",
+                    Rating = "PG-13",
+                    Price = 29.99M
+                },
+                new Movie
+                {
+                    Title = "Bruce Almighty",
+                    ReleaseDate = DateTime.Parse("2003-4-15"),
+                    Genre = "Comedy",
+                    Rating = "PG-13",
+                    Price = 19.99M
                 }
             );
             context.SaveChanges();
