@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "So72b0VM83s=",
+  "dgSpecHash": "hf20xrBrEaw=",
   "success": true,
   "projectFilePath": "C:\\Users\\jsbow\\Documents\\CSE325\\BlazorApp\\BlazorApp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jsbow\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.15\\microsoft.aspnetcore.app.internal.assets.10.0.15.nupkg.sha512"
+    "C:\\Users\\jsbow\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.15\\microsoft.aspnetcore.app.internal.assets.10.0.15.nupkg.sha512",
+    "C:\\Users\\jsbow\\.nuget\\packages\\my.firstclasslibrary\\0.1.0\\my.firstclasslibrary.0.1.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,0 +1,40 @@
+@if (Show) {
+
+ <div class="dialog-container">
+  <div class="dialog">
+   <div class="dialog-title">
+    <h2>@Title</h2>
+   </div>
+
+   <div class="dialog-body">
+    @ChildContent
+   </div>
+
+   <div class="dialog-buttons">
+    <button class="btn btn-success ml-auto" type="button" @onclick="OnConfirm">@ConfirmText</button>
+   </div>
+
+  </div>
+ </div>
+
+}
+
+@code {
+
+ [Parameter]
+ public string Title { get; set; }
+
+ [Parameter]
+ public string ConfirmText { get; set; } = "Ok";
+
+ [Parameter]
+ public RenderFragment ChildContent { get; set; }
+
+ [Parameter]
+ public bool Show { get; set; }
+
+
+ [Parameter] 
+ public EventCallback OnConfirm { get; set; }
+
+}

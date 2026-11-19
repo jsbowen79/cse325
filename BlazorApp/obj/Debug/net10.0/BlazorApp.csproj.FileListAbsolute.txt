@@ -70,9 +70,6 @@ C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\compressed\mxp9w50l4
 C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\compressed\l2mhd45r4z-{0}-63fj8s7r0e-63fj8s7r0e.gz
 C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\compressed\i0oilot2q1-{0}-0j3bgjxly4-0j3bgjxly4.gz
 C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\compressed\hsa0fwp5ls-{0}-abdmv1u4y3-abdmv1u4y3.gz
-C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\compressed\0txged01c1-{0}-xmryko9e6j-xmryko9e6j.gz
-C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\compressed\e2p7e3doxt-{0}-7d17r9czpp-7d17r9czpp.gz
-C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\compressed\8v4adbxxmx-{0}-2mc2qwa0tf-2mc2qwa0tf.gz
 C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\compressed\rrzzv9ip5o-{0}-2mc2qwa0tf-2mc2qwa0tf.gz
 C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\staticwebassets.build.json.cache
@@ -84,3 +81,11 @@ C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\refint\BlazorApp.dll
 C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\BlazorApp.pdb
 C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\BlazorApp.genruntimeconfig.cache
 C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\ref\BlazorApp.dll
+C:\Users\jsbow\Documents\CSE325\BlazorApp\bin\Debug\net10.0\FirstClassLibrary.dll
+C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\BlazorApp.csproj.AssemblyReference.cache
+C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\compressed\0txged01c1-{0}-whefm3rrpu-whefm3rrpu.gz
+C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\compressed\e2p7e3doxt-{0}-kyitu4x8cy-kyitu4x8cy.gz
+C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\BlazorApp.csproj.Up2Date
+C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\compressed\ypw5dmf32j-{0}-6pqz8bsss0-6pqz8bsss0.gz
+C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\compressed\xqe6zra2bf-{0}-ozy6nqkkay-ozy6nqkkay.gz
+C:\Users\jsbow\Documents\CSE325\BlazorApp\obj\Debug\net10.0\compressed\8v4adbxxmx-{0}-tdnuonwaei-tdnuonwaei.gz

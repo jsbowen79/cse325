@@ -1,0 +1,42 @@
+﻿@page "/"
+@using ConnectFour.Components
+@rendermode InteractiveServer
+
+<PageTitle>Home</PageTitle>
+<Modal Title="@activePlayerName" Show="@showModal" OnConfirm="@(() => assignPieceColor(@activePlayer))">
+     <h1>Choose your Color</h1>
+     <PieceColors @ref="pieceColor"/>
+</Modal>
+
+<Board 
+     BoardColor="System.Drawing.Color.Black"
+     Player1Color=player1Color
+     Player2Color=player2Color />
+
+
+@code
+{
+     private System.Drawing.Color player1Color { get; set; } = System.Drawing.Color.White;
+     private System.Drawing.Color player2Color { get; set; } = System.Drawing.Color.Purple;
+
+     private PieceColors? pieceColor;
+     private String activePlayerName { get; set; } = "Player 1";
+     private int activePlayer { get; set; } = 1;
+     private bool showModal = true; 
+     private void assignPieceColor(int playerNumber)
+     {
+          if (playerNumber == 1)
+          {
+               player1Color = System.Drawing.Color.FromName(pieceColor!.pieceColor.PieceColor.ToString());
+               activePlayerName = "Player 2";
+               activePlayer = 2;                
+
+          } else
+          {
+               player2Color = System.Drawing.Color.FromName(pieceColor!.pieceColor.PieceColor.ToString());
+               showModal = false; 
+               
+          }
+          
+     }
+}

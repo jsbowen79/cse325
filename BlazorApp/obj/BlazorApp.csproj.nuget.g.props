@@ -13,6 +13,7 @@
     <SourceRoot Include="C:\Users\jsbow\.nuget\packages\" />
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)my.firstclasslibrary\0.1.0\buildTransitive\My.FirstClassLibrary.props" Condition="Exists('$(NuGetPackageRoot)my.firstclasslibrary\0.1.0\buildTransitive\My.FirstClassLibrary.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.app.internal.assets\10.0.15\build\Microsoft.AspNetCore.App.Internal.Assets.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.app.internal.assets\10.0.15\build\Microsoft.AspNetCore.App.Internal.Assets.props')" />
   </ImportGroup>
 </Project>

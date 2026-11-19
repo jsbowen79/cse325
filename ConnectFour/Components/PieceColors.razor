@@ -1,0 +1,30 @@
+
+
+<div>
+    <EditForm Model="@pieceColor">
+            <InputRadioGroup name="colorSelect" @bind-Value=pieceColor.PieceColor>
+        @{
+            foreach (var color in Enum.GetValues(typeof(AvailableColors.Color)))
+            {
+                <label> 
+                    <div class="board">
+                        <span class="container" style="background-color:@color" >
+                            <span></span>
+                        </span>
+                    </div>
+                <InputRadio Value="@color"></InputRadio>
+                </label>
+            }
+            }
+
+            </InputRadioGroup>
+            
+    </EditForm>
+</div>
+
+@code {
+    public AvailableColors pieceColor = new AvailableColors
+        {
+            PieceColor = AvailableColors.Color.Red
+        };
+}
